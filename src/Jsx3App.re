@@ -1,4 +1,10 @@
 [@bs.config {jsx: 3}];
 
 [@react.component]
-let make = _ => <Button id="id"> "Click me"->React.string </Button>;
+let make = () => <Button id="id"> "Click me"->React.string </Button>;
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+  let make = children =>
+    ReasonReactCompat.wrapReactForReasonReact(make, makeProps(), children);
+};
