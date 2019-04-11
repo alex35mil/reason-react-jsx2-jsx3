@@ -1,5 +1,5 @@
 let component = ReasonReact.statelessComponent(__MODULE__);
-let make = _ => {
+let make = (_: unit) => {
   ...component,
   render: _ => <Button.Jsx2 id="id"> "Click me"->React.string </Button.Jsx2>,
 };
