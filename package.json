@@ -1,0 +1,11 @@
+{
+  "name": "reason-react-jsx2-jsx3",
+  "version": "0.0.1",
+  "private": "true",
+  "license": "MIT",
+  "dependencies": {
+    "bs-platform": "5.0.1",
+    "reason-react": "0.7.0",
+    "upgrade-reason-react": "git+https://github.com/rickyvetter/upgrade-reason-react.git#master"
+  }
+}
