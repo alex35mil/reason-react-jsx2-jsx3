@@ -1,7 +1,7 @@
 [@bs.config {jsx: 3}];
 
 [@react.component]
-let make = () => <Button id="id"> "Click me"->React.string </Button>;
+let make = () => <Button id="Jsx3App"> "Jsx3App"->React.string </Button>;
 
 module Jsx2 = {
   let component = ReasonReact.statelessComponent(__MODULE__);
