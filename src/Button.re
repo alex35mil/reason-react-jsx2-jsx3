@@ -1,7 +1,9 @@
-let component = ReasonReact.statelessComponent(__MODULE__);
-let make = (~id, children) => {
-  ...component,
-  render: _ => <button id> ...children </button>,
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+  let make = (~id, children) => {
+    ...component,
+    render: _ => <button id> ...children </button>,
+  };
 };
 /**
  * This is a wrapper created to let this component be used from the new React api.
@@ -9,7 +11,7 @@ let make = (~id, children) => {
  */
 let make =
   ReasonReactCompat.wrapReasonReactForReact(
-    ~component,
+    ~component=Jsx2.component,
     (
       reactProps: {
         .
@@ -17,7 +19,7 @@ let make =
         "children": 'children,
       },
     ) =>
-    make(~id=reactProps##id, reactProps##children)
+    Jsx2.make(~id=reactProps##id, reactProps##children)
   );
 [@bs.obj]
 external makeProps:
